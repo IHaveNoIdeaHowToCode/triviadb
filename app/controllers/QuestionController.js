@@ -8,13 +8,13 @@ import { Pop } from "../utils/Pop.js";
 export class QuestionController {
   constructor() {
     console.log("Question Constructor is here!");
-    this.getTwenTriviaQuestions()
+    this.getTenTriviaQuestions()
     AppState.on(`questions`, this.drawQuestions)
   }
 
-  async getTwenTriviaQuestions() {
+  async getTenTriviaQuestions() {
     try {
-      await questionService.getTwenQuestionsForTrivia()
+      await questionService.getTenQuestionsForTrivia()
       Pop.success('Got the Questions!')
     } catch (error) {
       console.error('FAILED TO GET QUESTIONS FROM API', error);
